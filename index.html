@@ -13,12 +13,12 @@
             <h1>Caculadora de Gorjetas</h1>
         </div>
         <div>
-            <form class="tipsForm">
+            <form class="tipsForm" id="tipsForm">
                 <label for="bill">
                     <p>Quanto ficou a conta?</p>
                 </label>
                 <p>
-                    R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput">
+                    R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" required>
                 </p>
             </form>
         </div>
@@ -28,7 +28,7 @@
                     <p>Como foi seu serviço?</p>
                 </label>
                 <p>
-                    <select name="serviceQual" id="serviceQual" class="formSelect">
+                    <select name="serviceQual" id="serviceQual" class="formSelect" required>
                         <option disable selected value="0.0">Escolha uma opção</option>
                         <option value="0.0">Não gostei do atendimento</option>
                         <option value="0.1">10% - Aceitável</option>
@@ -44,11 +44,17 @@
                     <p>Quantas pessoas vão dividir a conta?</p>
                 </label>
                 <p>
-                    <input type="number" placeholder="10" name="peopler" id="people" class="formInput"> Pessoas
+                    <input type="number" placeholder="1" name="peopler" id="people" class="formInput" required> Pessoas
                 </p>
                 <button type="submite" class="formSubmit">Calcular</button>
             </form>
         </div>
+        <div id="totalTips">
+            Gorjeta total:
+            R$<span id="tip">0.00</span>
+            <p id="each">cada</p>
+        </div>
     </div>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
